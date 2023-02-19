@@ -65,11 +65,10 @@ body{
 
 .left{
     border: 1px solid black;
-    flex: 5;
 
 }
 
-.cat{
-    
+.right{
+    border: 1px solid black;
 }
 
