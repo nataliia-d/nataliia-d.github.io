@@ -76,3 +76,14 @@ body{
 
 }
 
+.marcy{
+    margin: auto;
+    padding: auto;
+    width: 50%;
+}
+
+.marcy_link{
+    font-size: 3vw;
+    border: 10px double red;
+    
+}
