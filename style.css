@@ -1,10 +1,10 @@
 *{
     
     margin:auto;
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-bottom: 10px;
+    padding-top: 1%;
+    /* padding-right: 0.1%;
+    padding-left: 0.1%; */
+    padding-bottom: 1%;
     
 
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -20,7 +20,7 @@
     font-family: 'Labrada', serif;
     color:rgb(81, 47, 91) ;
     width: 50%;
-    font-size: 50px;
+    font-size: 3vw;
     text-align: center;
     
     
@@ -29,7 +29,7 @@
 
 .main{
     
-    width: 80%;
+    width: 95%;
     height: 100vh;
     background-color: rgb(227, 206, 228);
     display: flex;
@@ -65,10 +65,14 @@ body{
 
 .left{
     border: 1px solid black;
+    font-size: 1.5vw;
+
 
 }
 
 .right{
     border: 1px solid black;
+    font-size: 1.5vw;
+
 }
 
