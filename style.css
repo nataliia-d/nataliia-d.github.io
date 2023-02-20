@@ -11,7 +11,7 @@
     
 }
 .top{
-    border: 0.5vw dashed rgb(81, 47, 91);
+    border: 0.4vw dashed rgb(81, 47, 91);
     background-color: rgb(230, 230, 230);
     background-image: url("https://media.tenor.com/atuw3rTKjjoAAAAC/waves-animated.gif") ;
     background-blend-mode: lighten;
@@ -33,7 +33,7 @@
     height: 100vh;
     background-color: rgb(227, 206, 228);
     display: flex;
-    border: 0.4vw double black;
+    border: 0.3vw double black;
     justify-content: flex-end;
     align-items: flex-end;
     
@@ -84,6 +84,6 @@ body{
 
 .marcy_link{
     font-size: 3vw;
-    border: 1vw double red;
+    border: 0.5vw double red;
     
 }
