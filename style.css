@@ -53,6 +53,11 @@ p{
     font-weight: 400;
 }
 
+.subtext{
+    font-size: 15px;
+    font-weight: 200;
+}
+
 .hero-area{
     display: flex;
     height: 100%;
@@ -105,7 +110,34 @@ p{
     padding: 80px;
 }
 
+.sub-section-alternative{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 80px;
+
+
+}
+
 .photo{
     width: 300px;
     border-radius: 150px
+}
+
+.project-card{
+    width: 300px;
+    height: 500px;
+    box-shadow: 5px 5px 20px rgb(176, 176, 176);
+    margin: 10px;
+}
+
+.project-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.project-image{
+    margin-top: 25px;
+    width: 250px;
+    border-radius: 125px;
 }
