@@ -43,6 +43,10 @@ h1{
     margin: 0;
 }
 
+h2{
+    font-size: 50px;
+}
+
 p{
     margin: 0%;
     font-size: 30px;
@@ -91,4 +95,17 @@ p{
 
 .logo{
     height: 200px;
+    border-radius: 150px
+
+}
+
+.sub-section{
+    display: flex;
+    justify-content: space-around;
+    padding: 80px;
+}
+
+.photo{
+    width: 300px;
+    border-radius: 150px
 }
