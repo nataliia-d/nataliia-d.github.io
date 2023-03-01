@@ -1,10 +1,18 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const expandsMore = document.querySelectorAll('[expand-more]')
 
-console.log("java script is working!!!");
+    function expand(){
+        const showContent = document.getElementById(this.dataset.target)
+        if (showContent.classList.contains('expand-active')){
+            this.innerHTML=this.dataset.showtext
+        }
+        else{
+            this.innerHTML=this.dataset.hidetext
+        }
+        showContent.classList.toggle('expand-active')
+    }
 
-let e = document.querySelector(".left");
-let fontSize = 10;
-
-// setInterval( ()=> {
-//     e.style.fontSize = fontSize + "px";
-//     fontSize++;
-// }, 100);
+    expandsMore.forEach(expandMore => {
+        expandMore.addEventListener('click', expand)
+    })
+})
