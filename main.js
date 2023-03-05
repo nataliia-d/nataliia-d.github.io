@@ -20,10 +20,13 @@ function doSomething() {
 
   // handle the dragstart
   function dragStart(e) {
+    const frogDiv = e.target.parentElement;
     console.log('drag starts...');
-    e.dataTransfer.setData('text/plain', e.target.id);
+    console.log(e);
+    console.log(frogDiv);
+    e.dataTransfer.setData('text/plain', frogDiv.id);
     setTimeout(() => {
-      e.target.classList.add('hide');
+      frogDiv.classList.add('hide');
     }, 0);
   }
 
@@ -51,7 +54,11 @@ function doSomething() {
 
     // get the draggable element
     const id = e.dataTransfer.getData('text/plain');
+    console.log(id);
     const draggable = document.getElementById(id);
+
+    console.log(draggable);
+    console.log(e.target);
 
     // add it to the drop target
     e.target.appendChild(draggable);
