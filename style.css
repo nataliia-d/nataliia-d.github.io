@@ -15,7 +15,7 @@ body{
   }
 
 .main-container{
-    background-color: pink;
+    background-color: rgba(255, 192, 203, 0.913);
     margin-top: 3%;
     margin-bottom: 3%;
     width: 90%;
@@ -25,7 +25,6 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    opacity: 0.9;
 
 }
 
@@ -69,5 +68,21 @@ body{
 
 * {cursor: url(https://cur.cursors-4u.net/symbols/sym-6/sym596.cur), auto !important;}
 
+.drag-slot{
+    height: 500px;
+    width: 500px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.hide {
+    display: none;
+}
+
+.drag-over {
+    border: dashed 3px red;
+}
 
 
