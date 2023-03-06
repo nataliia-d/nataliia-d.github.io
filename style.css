@@ -16,6 +16,9 @@ background-color: rgb(194, 250, 216);
 display: grid;
 place-items: center;
 font-size: 40px;
+color: rgb(15, 37, 24);
+border: 1px solid white;
+
 }
 
 .main{
@@ -25,7 +28,7 @@ flex-direction: column;
 }
 
 .footer{
-background-color: cornflowerblue;
+background-color: rgb(194, 250, 216);
 display: grid;
 place-items: center;
 }
