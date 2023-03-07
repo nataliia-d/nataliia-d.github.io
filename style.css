@@ -116,17 +116,26 @@ place-items: center;
 }
 
 .main-bottom{
-    width: 100%;
     padding-top: 70px;
     padding-bottom: 70px;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    gap: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+
 }
+
+@media screen and (min-width: 1024px) {
+    .main-bottom{
+        flex-direction: row;
+    }
+  }
 
 .column{
     padding: 20px;
     height: 100%;
-    width: 27%;
     box-shadow: 5px 5px 20px rgba(255, 248, 248, 0.623);
     border-radius: 20px;
     background-color: rgba(127, 255, 146, 0.062);
@@ -196,3 +205,5 @@ place-items: center;
     transition: height 0.2s ease-in-out;
     transition: width 0.2s ease-in-out;
 }
+
+
