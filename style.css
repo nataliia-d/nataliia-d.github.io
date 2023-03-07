@@ -12,12 +12,13 @@ body{
   }
 
 .header{
-background-color: rgb(194, 250, 216);
+background-color: rgba(194, 250, 216, 0.646);
 display: grid;
 place-items: center;
 font-size: 40px;
 color: rgb(15, 37, 24);
 border: 1px solid white;
+user-select: none;
 
 }
 
@@ -28,7 +29,7 @@ flex-direction: column;
 }
 
 .footer{
-background-color: rgb(194, 250, 216);
+background-color: rgba(194, 250, 216, 0.646);
 display: grid;
 place-items: center;
 }
@@ -37,14 +38,17 @@ place-items: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
+    gap: 20px;
 
 }
 
 .button{
-    padding: 40px;
+    padding: 20px;
     font-weight: 700;
     font-size: 30px;
     border-radius: 20px;
+    background-color: rgba(42, 165, 69, 0.059);
+    user-select: none;
 
 }
 
@@ -105,6 +109,7 @@ place-items: center;
     background-color: rgba(240, 248, 255, 0.489);
     padding: 20px;
     border-radius: 10px;
+    user-select: none;
   }
 
 .image-text:hover{
@@ -135,12 +140,24 @@ place-items: center;
 
 .column{
     padding: 20px;
-    height: 100%;
     box-shadow: 5px 5px 20px rgba(255, 248, 248, 0.623);
     border-radius: 20px;
     background-color: rgba(127, 255, 146, 0.062);
     font-size: larger;
 }
+
+/* .column1{
+    flex: 0 0 400px;
+
+}
+
+.column2{
+    flex: 1;
+}
+
+.column3{
+    flex: 1;
+} */
 
 .gallery{
     display: flex;
@@ -156,8 +173,7 @@ place-items: center;
     font-weight: 400;
     width: 400px;
     height: 110px;
-
-
+    user-select: none;
 }
 
 .gallery-button:hover{
