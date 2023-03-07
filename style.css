@@ -68,7 +68,8 @@ place-items: center;
 
 .main-top{
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
 }
 
