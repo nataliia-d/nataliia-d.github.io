@@ -132,3 +132,67 @@ place-items: center;
     background-color: rgba(127, 255, 146, 0.062);
     font-size: larger;
 }
+
+.gallery{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.gallery-button{
+    margin: 5%;
+    margin-bottom: 100px;
+    border-radius: 30px;
+    text-align: center;
+    font-weight: 400;
+    width: 400px;
+    height: 110px;
+
+
+}
+
+.gallery-button:hover{
+    background-color: rgba(42, 165, 69, 0.418);
+    cursor: pointer;
+}
+
+.gallery-content{
+    height: 0px;
+    margin: 50px;
+    margin-top: 0px;
+    margin-bottom: 100px;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-content:flex-start;
+
+}
+
+.gallery-content.expand-active{
+    height:auto;
+    transition: height 0.5s ease-in-out;
+}
+
+.btn-expand-more{
+    display: inline-block;
+}
+
+.gallery-image{
+    height: 300px;
+    width: 300px;
+    background-color:rgba(169, 169, 169, 0.381);
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: 20px;
+    transition: height 0.2s ease-in-out;
+    transition: width 0.2s ease-in-out;
+}
+
+.gallery-image:hover{
+    height: 400px;
+    width: 400px;
+    transition: height 0.2s ease-in-out;
+    transition: width 0.2s ease-in-out;
+}
