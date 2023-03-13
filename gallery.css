@@ -12,7 +12,9 @@
     font-weight: 400;
     width: 400px;
     height: 110px;
+    line-height: 110px;
     user-select: none;
+        font-weight: 700;
 }
 
 .gallery-button:hover{
@@ -22,26 +24,38 @@
 
 .gallery-content{
     height: 0px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 0px;
+    padding-top: 0px;
     margin: 50px;
     margin-top: 0px;
     margin-bottom: 100px;
     overflow: hidden;
-    transition: height 0.5s ease-in-out;
     position: relative;
     display: flex;
     flex-wrap: wrap;
     align-content:flex-start;
     gap: 16px;
+    transition: height 0.5s ease-in-out,
+    padding-top 0.5s ease-in-out,
+    padding-bottom 0.5s ease-in-out;
 }
 
 .gallery-content.expand-active{
-    height:auto;
-    overflow: visible;
-    transition: height 0.5s ease-in-out;
+    height:1500px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    transition: height 0.5s ease-in-out,
+    padding-top 0.5s ease-in-out,
+    padding-bottom 0.5s ease-in-out;
+
 }
 
 .btn-expand-more{
-    display: inline-block;
+    display: grid;
+    place-items: center;
+
 }
 
 .image-container{
