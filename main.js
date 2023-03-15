@@ -14,6 +14,24 @@ function doSomething() {
   expandsMore.forEach((expandMore) => {
     expandMore.addEventListener('click', expand);
   });
+
+  var imageCount = 0;
+  let imageIdList = [];
+
+  function addDiv() {
+    imageCount++;
+    var divElement = document.createElement("div");
+    divElement.classList.add("image-container");
+    // divElement.innerHTML = "<div class='gallery-image'></div>";
+    divElement.innerHTML = imageCount;
+    divElement.id = imageCount;
+    imageIdList.push(imageCount);
+    console.log(imageIdList);
+    document.getElementById("gallery-main").appendChild(divElement);
+  }
+
+  document.getElementById("add-button").addEventListener('click', addDiv);
+
 }
 
 document.addEventListener('DOMContentLoaded', doSomething);
