@@ -22,15 +22,25 @@ function doSomething() {
     imageCount++;
     var divElement = document.createElement("div");
     divElement.classList.add("image-container");
-    // divElement.innerHTML = "<div class='gallery-image'></div>";
-    divElement.innerHTML = imageCount;
+    divElement.innerHTML = "<div class='gallery-image'></div>";
+    // divElement.innerHTML = imageCount;
     divElement.id = imageCount;
     imageIdList.push(imageCount);
     console.log(imageIdList);
     document.getElementById("gallery-main").appendChild(divElement);
   }
 
+  function subtractDiv(){
+    var firstImageID = (imageIdList[0]);
+    var firstImage = (document.getElementById(firstImageID));
+    firstImage.parentNode.removeChild(firstImage);
+    imageIdList.shift();
+    console.log(firstImage);
+  }
+
   document.getElementById("add-button").addEventListener('click', addDiv);
+  document.getElementById("subtract-button").addEventListener('click', subtractDiv);
+
 
 }
 
