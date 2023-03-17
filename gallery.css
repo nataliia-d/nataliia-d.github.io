@@ -67,6 +67,7 @@
     width: 300px;
     display: grid;
     place-items: center;
+    position:relative;
     
 }
 
@@ -82,7 +83,7 @@
     --transition-time: 0.3s;
     height: 300px;
     width: 300px;
-    background-color:rgb(169, 169, 169);
+    /* background-color:rgb(169, 169, 169); */
     border: 3px solid rgba(255, 255, 255, 0.349);
     border-radius: 5%;
     z-index: 0;
@@ -111,8 +112,8 @@
 }
 
 #add-button{
-    height: 75px;
-    width: 75px;
+    height: 200px;
+    width: 200px;
     border-radius: 30px;
     font-size: 50px;
     font-weight: 700;
@@ -120,6 +121,10 @@
     justify-self: left;
     margin: 50px;
     user-select: none;
+    background-color: rgba(42, 165, 69, 0.094);
+    line-height: 200px;
+    color: rgba(218, 218, 218, 0.694);
+
 
 }
 
@@ -127,19 +132,25 @@
     background-color: rgba(42, 165, 69, 0.418);
 }
 
-#subtract-button{
-    height: 75px;
-    width: 75px;
+#remove-button{
+    background-color: rgba(244, 250, 255, 0.484);
+    background-image: url("https://cdn-icons-png.flaticon.com/512/1345/1345874.png");
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60px;
+    width: 60px;
     border-radius: 30px;
     font-size: 50px;
     font-weight: 700;
     text-align: center;
     justify-self: left;
-    margin: 50px;
+    margin: 5px;
     user-select: none;
-
+    position: absolute;
+    z-index: 99999;
 }
 
-#subtract-button:hover{
+#remove-button:hover{
     background-color: rgba(42, 165, 69, 0.418);
 }

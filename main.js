@@ -15,32 +15,52 @@ function doSomething() {
     expandMore.addEventListener('click', expand);
   });
 
-  var imageCount = 0;
-  let imageIdList = [];
+  let imageCount = 0;
+  const imageIdList = [];
+  const galleryMain = document.getElementById("gallery-main");
+  const imageURLs = ["https://i.pinimg.com/564x/55/c2/98/55c298d350bbb4c95111ecadb23c688f.jpg",
+   "https://i.pinimg.com/564x/60/66/ac/6066ac0b73d746a1f88cae47c6ad7b7a.jpg",
+   "https://i.pinimg.com/564x/5c/07/9e/5c079e9b2d1ca4959334aeb916e0b78b.jpg",
+   "https://i.pinimg.com/564x/12/98/c5/1298c597ebc4811d09cca0c3ffa0a7a6.jpg",
+   "https://i.pinimg.com/564x/56/56/54/56565424f72a2936c5189049e3190e34.jpg",
+   "https://i.pinimg.com/564x/f0/22/ab/f022ab4577cea807544d41fe2e07a9ba.jpg",
+   "https://i.pinimg.com/564x/e6/a3/e0/e6a3e0d852c02fdede98d2cf8957f07f.jpg",
+   "https://i.pinimg.com/564x/cd/72/fc/cd72fc404ff63cdc2edbde78f0802256.jpg"];
+  const addButton = document.getElementById("add-button-container");
 
   function addDiv() {
+
+    const randomNum = Math.floor(Math.random() * imageURLs.length);
+
     imageCount++;
-    var divElement = document.createElement("div");
-    divElement.classList.add("image-container");
-    divElement.innerHTML = "<div class='gallery-image'></div>";
+    let newImage = document.createElement("div");
+    newImage.classList.add("image-container");
+    newImage.innerHTML = "<div class='gallery-image' id='i" + imageCount + "'></div>";
     // divElement.innerHTML = imageCount;
-    divElement.id = imageCount;
+    newImage.firstChild.style.backgroundImage = "url('" + imageURLs[randomNum] + "')";
+    newImage.firstChild.style.backgroundSize = "cover";
+    newImage.id = imageCount;
     imageIdList.push(imageCount);
-    console.log(imageIdList);
-    document.getElementById("gallery-main").appendChild(divElement);
+    galleryMain.insertBefore(newImage, addButton);
+
+    // remove button
+    let imageID = "i" + imageCount
+    let removeButton = document.createElement("div");
+    removeButton.id = "remove-button";
+    document.getElementById(imageID).appendChild(removeButton);
+    removeButton.addEventListener('click', subtractDiv);
+    
+
   }
 
   function subtractDiv(){
-    var firstImageID = (imageIdList[0]);
-    var firstImage = (document.getElementById(firstImageID));
+    let firstImageID = (imageIdList[0]);
+    let firstImage = (document.getElementById(firstImageID));
     firstImage.parentNode.removeChild(firstImage);
     imageIdList.shift();
-    console.log(firstImage);
   }
 
   document.getElementById("add-button").addEventListener('click', addDiv);
-  document.getElementById("subtract-button").addEventListener('click', subtractDiv);
-
 
 }
 
