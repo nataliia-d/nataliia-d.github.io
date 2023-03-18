@@ -132,7 +132,7 @@
     background-color: rgba(42, 165, 69, 0.418);
 }
 
-#remove-button{
+.remove-button{
     background-color: rgba(244, 250, 255, 0.484);
     background-image: url("https://cdn-icons-png.flaticon.com/512/1345/1345874.png");
     background-size: 30px;
@@ -151,6 +151,6 @@
     z-index: 99999;
 }
 
-#remove-button:hover{
+.remove-button:hover{
     background-color: rgba(42, 165, 69, 0.418);
 }
