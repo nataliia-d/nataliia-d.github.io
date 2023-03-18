@@ -49,22 +49,22 @@ function doSomething() {
     removeButton.classList.add("remove-button");
     removeButton.id = "remove-button" + imageCount;
     document.getElementById(imageID).appendChild(removeButton);
-    removeButton.addEventListener('click', subtractDiv(imageCount));
-    
+    removeButton.addEventListener('click', subtractDiv);
 
+    // setTimeout(removeElement, 5000, newImage)
+    setTimeout(() => {newImage.remove()}, 30000);
   }
+  // function removeElement(e) {
+  //   console.log("timer ran out");
+  //   console.log(e);
+  //   e.remove();
+  // }
 
-  function subtractDiv(imageCount){
-
-    let currentImageID = "i" + imageCount;
-    console.log(currentImageID)
-    console.log("remove some image");
 
 
-    // let firstImageID = (imageIdList[0]);
-    // let firstImage = (document.getElementById(firstImageID));
-    document.getElementById(currentImageID).parentNode.removeChild(currentImageID);
-    // imageIdList.shift();
+  function subtractDiv(event){
+    console.log('Click event', event);
+    event.target.parentElement.parentElement.remove();
   }
 
   document.getElementById("add-button").addEventListener('click', addDiv);
