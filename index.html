@@ -97,7 +97,14 @@
                 </div> -->
 
                 <div class="weather-container">
-                    <div id="zip">-</div>
+                    <div class="address">
+                        <div id="zip">-</div>
+                        <form id="zip-form">
+                            <input type="text" id="zip-input" autocomplete="postal-code" placeholder="Enter a ZIP code" required>
+                            <button type="submit" id="zip-submit"></button>
+                        </form>
+                    </div>
+
                     <div id="temperature">-°</div>
                     <div id="weather-description">-</div>
                 </div>

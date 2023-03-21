@@ -87,11 +87,44 @@ function doSomething() {
 
   document.getElementById("add-button").addEventListener('click', addDiv);
 
-  // run once you received the API data
+  //weather variables
 
   let zip = document.getElementById("zip");
   let temperature = document.getElementById("temperature");
   let weatherDescription = document.getElementById("weather-description");
+  
+  let form = document.getElementById('zip-form');
+  let submittedZip;
+
+  //manage form
+
+
+  form.addEventListener('submit', zipSubmit);
+
+  function zipSubmit(event){
+    event.preventDefault();
+    submittedZip = document.getElementById('zip-input').value;
+    console.log("form submitted")
+
+    let submittedWeatherAPI = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/" + submittedZip + "?unitGroup=us&key=VZYLFZ7ATQGTGAQNBXLQT5EH8&contentType=json";
+    
+    fetch(submittedWeatherAPI)
+      .then(response => response.json())
+      .then(data => {
+        weatherData = data;
+        console.log(weatherData);
+        weatherUpdate(weatherData);
+      })
+      .catch(error =>{
+        console.error(error);
+        alert("Please enter a valid ZIP code");
+      });
+
+  }
+
+  
+  // run once you received the API data
+
 
 
   function weatherUpdate(weatherData) {
@@ -101,6 +134,7 @@ function doSomething() {
     weatherDescription.innerText = weatherData.description;
 
   }
+
 
 }
 
