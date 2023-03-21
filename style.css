@@ -202,3 +202,51 @@ place-items: center;
     width: 700px;
     transition: width 0.4s ease-in-out;
 }
+
+.weather-container{
+    height: 500px;
+    width: 500px;
+    margin: 100px;
+    border-radius: 10px;
+    background-color: rgba(203, 224, 255, 0.621);
+    border: 10px double rgba(255, 255, 255, 0.441);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#temperature{
+    /* border: 1px solid black; */
+    text-align: center;
+    line-height: 250px;
+    font-size: 150px;
+    margin-bottom: 0px;
+    font-weight: 700;
+    color: aliceblue;
+    text-shadow: 1px 1px 1px #000000a5;
+
+    
+}
+
+#weather-description{
+    border: 1px solid rgba(255, 255, 255, 0.626);
+    margin-bottom: 100px;
+    padding: 20px;
+    font-weight: 700;
+    font-size: 90;
+    font-style: italic;
+    color: rgba(22, 23, 87, 0.628);
+    
+
+}
+
+#zip{
+    align-self: flex-start;
+    /* border: 1px solid black; */
+    padding-left: 20px;
+    font-weight: 700;
+    color: aliceblue;
+    text-shadow: 1px 1px 1px #000000a5;
+}

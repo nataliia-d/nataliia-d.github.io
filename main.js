@@ -1,4 +1,21 @@
 function doSomething() {
+
+  const weatherAPI = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/21030?unitGroup=us&key=VZYLFZ7ATQGTGAQNBXLQT5EH8&contentType=json";
+  
+  let weatherData;
+  
+  fetch(weatherAPI)
+    .then(response => response.json())
+    .then(data => {
+      weatherData = data;
+      console.log(weatherData);
+      weatherUpdate(weatherData);
+    })
+    .catch(error =>{
+      console.error(error);
+    });
+
+
   const expandsMore = document.querySelectorAll('[expand-more]');
 
   function expand() {
@@ -30,7 +47,8 @@ function doSomething() {
 
   function addDiv() {
 
-    const randomNum = Math.floor(Math.random() * imageURLs.length);
+    const randomNum = Math.floor(Math.random() * (imageURLs.length - 1) + 0.5);
+
 
     imageCount++;
     let newImage = document.createElement("div");
@@ -68,6 +86,21 @@ function doSomething() {
   }
 
   document.getElementById("add-button").addEventListener('click', addDiv);
+
+  // run once you received the API data
+
+  let zip = document.getElementById("zip");
+  let temperature = document.getElementById("temperature");
+  let weatherDescription = document.getElementById("weather-description");
+
+
+  function weatherUpdate(weatherData) {
+    console.log(weatherData.currentConditions.temp);
+    zip.innerText = weatherData.address;
+    temperature.innerText = weatherData.currentConditions.temp + "°";
+    weatherDescription.innerText = weatherData.description;
+
+  }
 
 }
 
