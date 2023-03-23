@@ -1,10 +1,38 @@
-function doSomething() {
-
-  const weatherAPI = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/21030?unitGroup=us&key=VZYLFZ7ATQGTGAQNBXLQT5EH8&contentType=json";
+function main() {
   
+  let userZIP = localStorage.getItem("userZIP");
   let weatherData;
+  let locatedZip;
+  let weatherAPI;
+
+  if(userZIP != null){
+    weatherAPI = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/" + userZIP + "?unitGroup=us&key=VZYLFZ7ATQGTGAQNBXLQT5EH8&contentType=json";
+    fetchAPI();
+  }
+
+  else{
+    
+    if(window.navigator.geolocation){
+      window.navigator.geolocation.getCurrentPosition(geolocationSuccess, console.log);
+    }
+
+    function geolocationSuccess(position){
+      const { latitude, longitude } = position.coords;
+      fetch(`https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=043aa787c4114ec493b5c8af1b5f247f`)
+        .then(response => response.json())
+        .then(data => {
+          locationData = data;
+          locatedZip = data.results[0].components.postcode;
+          console.log(locatedZip);
+          weatherAPI = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/" + locatedZip + "?unitGroup=us&key=VZYLFZ7ATQGTGAQNBXLQT5EH8&contentType=json";
+          fetchAPI();
+        });
+    }
+  };
   
-  fetch(weatherAPI)
+  
+  function fetchAPI(){
+    fetch(weatherAPI)
     .then(response => response.json())
     .then(data => {
       weatherData = data;
@@ -14,7 +42,7 @@ function doSomething() {
     .catch(error =>{
       console.error(error);
     });
-
+  }
 
   const expandsMore = document.querySelectorAll('[expand-more]');
 
@@ -98,7 +126,6 @@ function doSomething() {
 
   //manage form
 
-
   form.addEventListener('submit', zipSubmit);
 
   function zipSubmit(event){
@@ -108,6 +135,8 @@ function doSomething() {
 
     let submittedWeatherAPI = "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/" + submittedZip + "?unitGroup=us&key=VZYLFZ7ATQGTGAQNBXLQT5EH8&contentType=json";
     
+    localStorage.setItem("userZIP", submittedZip);
+
     fetch(submittedWeatherAPI)
       .then(response => response.json())
       .then(data => {
@@ -138,4 +167,4 @@ function doSomething() {
 
 }
 
-document.addEventListener('DOMContentLoaded', doSomething);
+document.addEventListener('DOMContentLoaded', main);
