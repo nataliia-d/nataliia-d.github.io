@@ -100,7 +100,7 @@
                     <div class="address">
                         <div id="zip">-</div>
                         <form id="zip-form">
-                            <input type="text" id="zip-input" autocomplete="postal-code" placeholder="Enter a ZIP code" required>
+                            <input type="text" id="zip-input" autocomplete="postal-code" placeholder="Enter a ZIP code" pattern="\d{5}" required title="Please enter a 5-digit number" required>
                             <button type="submit" id="zip-submit"></button>
                         </form>
                     </div>

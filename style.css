@@ -259,17 +259,25 @@ place-items: center;
 
 #zip-submit{
     background-image: url("https://cdn-icons-png.flaticon.com/512/61/61088.png");
-    border: 1px solid black;
+    border: none;
     margin-right: 20px;
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
     background-size: 20px;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: rgba(240, 248, 255, 0.591);
+    border-radius: 30px;
+    margin-left: 10px;
+}
+
+#zip-submit:hover{
+    background-color: rgba(0, 102, 255, 0.231);
 }
 
 #zip-input{
     height: 25px;
+    background-color: rgba(240, 248, 255, 0.591);
 }
 
 #zip-form{
