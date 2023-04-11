@@ -2,119 +2,57 @@
 <html lang="en">
 
 <head>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
     <script type="module" src="main.js" defer></script>
-    <script type="module" src="weather.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Nataliia's portfolio</title>
+    <title>Word Guess</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-    <div class="container">
-        <div class="header">
-            <h1>MY WEBSITE</h1>
+    <div class="main"> 
+        <div class="lives-container">
+            <img class="heart" id="heart1" src="https://freeiconshop.com/wp-content/uploads/edd/heart-outline.png" alt="heart">
+            <img class="heart" id="heart2" src="https://freeiconshop.com/wp-content/uploads/edd/heart-outline.png" alt="heart">
+            <img class="heart" id="heart3" src="https://freeiconshop.com/wp-content/uploads/edd/heart-outline.png" alt="heart">
+            <img class="heart" id="heart4" src="https://freeiconshop.com/wp-content/uploads/edd/heart-outline.png" alt="heart">
+            <img class="heart" id="heart5" src="https://freeiconshop.com/wp-content/uploads/edd/heart-outline.png" alt="heart">
+            <img class="heart" id="heart6" src="https://freeiconshop.com/wp-content/uploads/edd/heart-outline.png" alt="heart">
+            <img class="heart" id="heart7" src="https://freeiconshop.com/wp-content/uploads/edd/heart-outline.png" alt="heart">
+        </div>
+        <div id="word-container"></div>
+        <div class="letter-container">        
+            <div id="letter-grid">
+                <button class="letter">A</button>
+                <button class="letter">B</button>
+                <button class="letter">C</button>
+                <button class="letter">D</button>
+                <button class="letter">E</button>
+                <button class="letter">F</button>
+                <button class="letter">G</button>
+                <button class="letter">H</button>
+                <button class="letter">I</button>
+                <button class="letter">J</button>
+                <button class="letter">K</button>
+                <button class="letter">L</button>
+                <button class="letter">M</button>
+                <button class="letter">N</button>
+                <button class="letter">O</button>
+                <button class="letter">P</button>
+                <button class="letter">Q</button>
+                <button class="letter">R</button>
+                <button class="letter">S</button>
+                <button class="letter">T</button>
+                <button class="letter">U</button>
+                <button class="letter">V</button>
+                <button class="letter">W</button>
+                <button class="letter">X</button>
+                <button class="letter">Y</button>
+                <button class="letter">Z</button>
+            </div>
         </div>
 
-        <div class="main" >
-            <div class="main-top">
-                <img class="logo" alt="logo" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4b74ce52-9d95-4816-b0df-b77e88a2664c/ddpa10m-497a26e9-778f-4e30-a532-61e80aa195d1.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzRiNzRjZTUyLTlkOTUtNDgxNi1iMGRmLWI3N2U4OGEyNjY0Y1wvZGRwYTEwbS00OTdhMjZlOS03NzhmLTRlMzAtYTUzMi02MWU4MGFhMTk1ZDEuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0._hvlK9FGciNN_pN0vjkqr_an-oH5yzZiaar_aFjuXjA">
-                <div class="buttons"> 
-                    <div class="button1 button">button1</div>
-                    <div class="button2 button">button2</div>
-                    <div class="button3 button">button3</div>
-                    <div class="button4 button">button4</div>
-                    <div class="button5 button">button5</div>
-                </div>
-            </div>
-
-            <div class="main-intro">
-                <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.</p>
-
-<p>He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p>
-
-<p>His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me? " he thought. It wasn't a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
-
-<p>A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded frame. It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull weather. Drops</p>
-
-            </div>
-            <div class="main-image-container">
-                <div class="main-image">
-                    <div class="image-text">IMPORTANT BUTTON</div>
-                </div>
-                <!-- <img class="main-image" src="https://img5.goodfon.com/wallpaper/nbig/3/ca/art-griby-les-noch-svechenie.jpg" alt="mushrooms"> -->
-
-            </div>
-
-            <div class="main-bottom">
-                <div class="column1 column">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents. I should be incapable of drawing a single stroke at the present moment; and yet I feel that I never was a greater artist than now. When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown plants are noticed by me: when I hear the buzz of the little world among the stalks, and grow familiar with the countless indescribable forms of the insects and flies, then I feel the presence of the Almighty, who formed us in his own image, and the breath</div>
-                <div class="column2 column">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subl</div>
-                <div class="column3 column">The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators. To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages. The new common language will be more simple and regular than the existing European languages. It will be as simple as Occidental; in fact, it will be Occidental. To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine told me what Occidental is.The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The la</div>
-            </div>
-
-            <div class="gallery">
-
-                <div class="gallery-button" expand-more data-hidetext="CLOSE GALLERY" data-showtext="OPEN GALLERY" data-target="showMoreContent1" >
-                    <span class="btn-expand-more">OPEN GALLERY</span>
-                </div>
-
-                <div class="gallery-content" id="showMoreContent1"> 
-<!-- 
-                    <div class="gallery-top">
-                        <div id="subtract-button"></div>
-                    </div> -->
-
-                    <div class="gallery-main" id="gallery-main">
-                        <div class="image-container" id="add-button-container">
-                            <div id="add-button">+</div>
-                        </div>   
-                    </div>
-                 
-                </div>
-            </div>
-
-            <div class="feedback-container">
-                
-                <div class="scroll-container">
-                    <h3><u>scroll content</u></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus.</p>
-
-                    <p>Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus. Donec mollis hendrerit risus.</p>
-
-                    <p>Phasellus nec sem in justo pellentesque facilisis. Etiam imperdiet imperdiet orci. Nunc nec neque. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa. Sed cursus turpis vitae tortor. Donec posuere vulputate arcu. Phasellus accumsan cursus velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci. Phasellus consectetuer vestibulum elit. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Vestibulum fringilla pede sit amet augue. In turpis. Pellentesque posuere. Praesent turpis. Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis. Nullam sagittis. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce id purus.</p>
-
-                    <p>Ut varius tincidunt libero. Phasellus dolor. Maecenas vestibulum mollis diam. Pellentesque ut neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In dui magna, posuere eget, vestibulum et, tempor auctor, justo. In ac felis quis tortor malesuada pretium. Pellentesque auctor neque nec urna. Proin sapien ipsum, porta a, auctor quis, euismod ut, mi. Aenean viverra rhoncus pede. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut non enim eleifend felis pretium feugiat. Vivamus quis mi. Phasellus a est. Phasellus magna. In hac habitasse platea dictumst. Curabitur at lacus ac velit ornare lobortis. Curabitur a felis in nunc fringilla tristique. Morbi mattis ullamcorper velit. Phasellus gravida semper nisi. Nullam vel sem. Pellentesque libero tortor, tincidunt et, tincidunt eget, semper nec, quam. Sed hendrerit. Morbi ac felis. Nunc egestas, augue at pellentesque laoreet, felis eros vehicula leo, at malesuada velit leo quis pede. Donec interdum, metus et hendrerit aliquet, dolor diam sagittis ligula, eget egestas libero turpis vel mi. Nunc nulla. Fusce risus nisl, viverra et, tempor et, pretium in, sapien. Donec venenatis vulputate lorem. Morbi nec metus. Phasellus blandit leo ut odio. Maecenas ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et lorem. Sed magna purus, fermentum eu, tincidunt eu, varius ut, felis. In auctor lobortis lacus. Quisque libero metus, condimentum nec, tempor a, commodo mollis, magna. Vestibulum ullamcorper mauris at ligula. Fusce fermentum. Nullam cursus lacinia erat. Praesent blandit laoreet nibh. Fusce convallis metus id felis luctus adipiscing. Pellentesque egestas, neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Quisque id mi. Ut tincidunt tincidunt erat. Etiam feugiat lorem non metus. Vestibulum dapibus nunc ac augue. Curabitur vestibulum aliquam leo. Praesent egestas neque eu enim. In hac habitasse platea dictumst. Fusce a quam. Etiam ut purus mattis mauris</p>
-                </div>
-<!-- 
-                <div class="input-container">
-                    <input class="text-input"  placeholder="Write something...">
-                </div> -->
-
-                <div class="weather-container">
-                    <div class="address">
-                        <div id="zip">-</div>
-                        <form id="zip-form">
-                            <input type="text" id="zip-input" autocomplete="postal-code" placeholder="Enter a ZIP code" pattern="\d{5}" required title="Please enter a 5-digit number" required>
-                            <button type="submit" id="zip-submit"></button>
-                        </form>
-                    </div>
-
-                    <div id="temperature">-°</div>
-                    <div id="weather-description">-</div>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="footer">Footer Content</div>
     </div>
 
 </body>
