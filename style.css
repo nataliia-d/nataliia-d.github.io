@@ -8,6 +8,7 @@
     text-align: center;
     line-height: 100px;
     font-size: 50px;
+    letter-spacing: 0.5em;
 }
 
 .letter-container{
@@ -57,3 +58,4 @@
     height: 40px;
     width: 40px;
 }
+
