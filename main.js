@@ -19,4 +19,28 @@ $( document ).ready(() => {
   let list = new LinkedList(node1);
   console.log(list);
 
+  const input = document.getElementById("input");
+  const form = document.getElementById("input-form");
+
+  form.addEventListener("submit", event => {
+    event.preventDefault();
+    const submittedData = input.value;
+    addNode(submittedData);
+  });
+
+  function addNode(data){
+    const newNode = new ListNode(data);
+    if (list.head === null) {
+      list.head = newNode;
+    } else {
+      let currentNode = list.head;
+      while (currentNode.next !== null) {
+        currentNode = currentNode.next;
+      }
+      currentNode.next = newNode;
+    }
+    console.log(list);
+  }
+
+
 });
